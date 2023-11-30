@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-image: url(/images/top-bg.jpg);
+  background-image: url(images/top-bg.jpg);
   background-repeat: no-repeat;
   width: auto;
   height: 4000px;
