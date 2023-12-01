@@ -179,7 +179,12 @@ section .cards .card {
   width: calc(100% / 3 - 30px);
   text-align: center;
 }
-
+.portfolio{
+  background-color: #333;
+  color: #fff;
+  /* #c4c4c4 */
+  
+}
 .portfolio .cards .card {
   padding: 0 0 20px;
 }
@@ -302,7 +307,7 @@ footer a {
   padding: 0;
 }
 .card-profile {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
   text-align: center;
@@ -313,7 +318,7 @@ footer a {
 }
 
 .title-profile {
-  color: grey;
+  color: #333;
   font-size: 18px;
 }
 
@@ -323,7 +328,7 @@ footer a {
   display: inline-block;
   padding: 8px;
   color: white;
-  background-color: #000;
+  background-color: #333;
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -333,11 +338,15 @@ footer a {
 .link-profile {
   text-decoration: none;
   font-size: 22px;
-  color: black;
+  color: #333;
 }
 
 .contact-profile:hover, .link-profile:hover {
   opacity: 0.7;
+}
+
+.dr{
+  margin-left: 0px;
 }
 @media screen and (max-width: 860px) {
   .navbar .all-links {
@@ -403,9 +412,7 @@ footer a {
     height: 0;
   }
 }
-.dr{
-  margin-left: 0px;
-}
+
 
 @media screen and (max-width: 560px) {
   section .cards .card {
@@ -417,7 +424,7 @@ footer a {
   }
 }
 .gradient-background {
-    background: linear-gradient(300deg, #525252, #333, #fff);
+    background: linear-gradient(300deg, #3d3c3c, #333, #ffffff);
     background-size: 180% 180%;
     animation: gradient-animation 18s ease infinite;
   }
