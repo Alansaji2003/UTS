@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.
     css">
-    
-    
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
   </head>
   <body>
@@ -261,43 +261,92 @@
       <br>
       <br>
       <br>
-      <section class="about" id="about">
+      <section class="team about" id="about">
         <h2>Our Team</h2>
         <p>Meet the creators</p>
         </section>
 <div class="teamates">
 
-  <div class="bd-example m-0 border-0">
-    <div id="carouselExampleFade" class="carousel slide carousel-fade">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="1000" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">Alan</text></svg>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="1000" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Mansa</text></svg>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="1000" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Mehek</text></svg>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="1000" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Aditya</text></svg>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="1000" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Arihant</text></svg>
+  <div id="carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      
+  
+      
+
+    </div>
+    <div class="bd-example carousel-inner m-0 border-0">
+      <div class="carousel-item" data-bs-interval="5000" data-bs-touch="true">
+        <svg  width="800" height="630"  role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>About</title></svg>
+        <div class="carousel-caption d-none d-md-block">
+          
+          <div class="card-profile">
+            <img src="https://source.unsplash.com/1600x900/?man,boy" alt="John" style="width:100%">
+            <h1>John Doe</h1>
+            <p class="title-profile">CEO & Founder, Example</p>
+            <p>Harvard University</p>
+            <div style="margin: 24px 0;">
+              <a class="link-profile" href="#"><i class="fa fa-dribbble"></i></a> 
+              <a class="link-profile" href="#"><i class="fa fa-twitter"></i></a>  
+              <a class="link-profile" href="#"><i class="fa fa-linkedin"></i></a>  
+              <a class="link-profile" href="#"><i class="fa fa-facebook"></i></a> 
+            </div>
+            <p><button class="contact-profile">Contact</button></p>
+          </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div class="carousel-item active" data-bs-interval="5000" data-bs-touch="true">
+        <svg  width="800" height="630"  role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>About</title></svg>
+        <div class="carousel-caption d-none d-md-block">
+          <div class="card-profile">
+            <img src="https://source.unsplash.com/1600x900/?man,boy" alt="John" style="width:100%">
+            <h1>John Doe</h1>
+            <p class="title-profile">CEO & Founder, Example</p>
+            <p>Harvard University</p>
+            <div style="margin: 24px 0;">
+              <a class="link-profile" href="#"><i class="fa fa-dribbble"></i></a> 
+              <a class="link-profile" href="#"><i class="fa fa-twitter"></i></a>  
+              <a class="link-profile" href="#"><i class="fa fa-linkedin"></i></a>  
+              <a class="link-profile" href="#"><i class="fa fa-facebook"></i></a> 
+            </div>
+            <p><button class="contact-profile">Contact</button></p>
+          </div>
+          
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-touch="true">
+        <svg  width="800" height="630"  role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>About</title></svg>
+          
+        </svg>
+        
+        <div class="carousel-caption d-none d-md-block">
+          <div class="card-profile">
+            <img src="https://source.unsplash.com/1600x900/?man,boy" alt="John" style="width:100%">
+            <h1>John Doe</h1>
+            <p class="title-profile">CEO & Founder, Example</p>
+            <p>Harvard University</p>
+            <div style="margin: 24px 0;">
+              <a class="link-profile" href="#"><i class="fa fa-dribbble"></i></a> 
+              <a class="link-profile" href="#"><i class="fa fa-twitter"></i></a>  
+              <a class="link-profile" href="#"><i class="fa fa-linkedin"></i></a>  
+              <a class="link-profile" href="#"><i class="fa fa-facebook"></i></a> 
+            </div>
+            <p><button class="contact-profile">Contact</button></p>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-
 </div>
   
 

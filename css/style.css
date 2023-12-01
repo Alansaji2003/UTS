@@ -213,6 +213,10 @@ section .cards .card {
   
   
 }
+.team{
+  height: 1px;
+  text-align: center;
+}
 
 
 .contact .row {
@@ -297,7 +301,44 @@ footer span {
 footer a {
   padding: 0;
 }
+.card-profile {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+ 
+  
 
+}
+
+.title-profile {
+  color: grey;
+  font-size: 18px;
+}
+
+.contact-profile{
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.link-profile {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.contact-profile:hover, .link-profile:hover {
+  opacity: 0.7;
+}
 @media screen and (max-width: 860px) {
   .navbar .all-links {
     position: fixed;
