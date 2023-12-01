@@ -179,12 +179,7 @@ section .cards .card {
   width: calc(100% / 3 - 30px);
   text-align: center;
 }
-.portfolio{
-  background-color: #333;
-  color: #fff;
-  /* #c4c4c4 */
-  
-}
+
 .portfolio .cards .card {
   padding: 0 0 20px;
 }
@@ -427,6 +422,7 @@ footer a {
     background: linear-gradient(300deg, #3d3c3c, #333, #ffffff);
     background-size: 180% 180%;
     animation: gradient-animation 18s ease infinite;
+    color: #ffffff;
   }
   
   @keyframes gradient-animation {
