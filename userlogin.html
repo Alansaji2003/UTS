@@ -8,18 +8,22 @@
 
 <style>
   body {
-  background-image: url(images/bg.jpeg);
+    background-image: url();
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Open Sans", sans-serif;
-  color: #333333;
+  color: #100e0e;
+  
+  padding-top: 32px;
+  
+  
 }
 
 .box-form {
   margin: 0 auto;
   width: 80%;
-  background:white;
+  background:lightblue;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
@@ -40,18 +44,21 @@
   height: auto;
 }
 .box-form .left {
-  color: rgb(253, 252, 252);
+  color:black;
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+  font-size: 18px;
 }
 .box-form .left .overlay {
   padding: 30px;
   width: 100%;
   height: 100%;
-  background: orange;
+  background:url( images/us-bg.png);
   overflow: hidden;
   box-sizing: border-box;
+  opacity: 0.7;
+  
 }
 .box-form .left .overlay h1 {
   font-size: 8vmax;
@@ -92,7 +99,7 @@
 }
 .box-form .right p {
   font-size: 14px;
-  color: #B0B3B9;
+  color: #323742;
 }
 .box-form .right .inputs {
   overflow: hidden;
@@ -177,7 +184,8 @@ label input[type="checkbox"] {
 <div class="box-form">
 	<div class="left">
 		<div class="overlay">
-		<h1>U.T.S User</h1>
+		<h1 style="color: pink ;text-shadow: #49C628;">U.T.S </h1>
+      
 		<p>"Welcome! Enjoy hassle-free access to our cab services <br>
             tailored for seniors. Please enter your credentials to login<br> and 
             embark on comfortable rides with specialized assistance." </p>
