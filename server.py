@@ -28,7 +28,7 @@ def user_login():
     form = MyForm()
     if request.method == "POST" and form.validate_on_submit():
         if form.email.data == "admin@uts.com" and form.password.data == "12345678":
-            return render_template("addInfo.html")
+            return render_template("account.html")
         else:
             return render_template("userlogin.html",form=form)
     else:
@@ -52,12 +52,12 @@ def user_signup():
 
 @app.route("/volunteerSignup")
 def volunteer_signup():
-    return render_template("driverSignup.html")
+    return render_template("volSignup.html")
 
 
 @app.route("/driverSignup")
 def driver_signup():
-    return render_template("volSignup.html")
+    return render_template("driverSignup.html")
 
 
 @app.route("/Account")
