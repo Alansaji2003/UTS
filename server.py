@@ -4,8 +4,8 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email, Length
 
-db = sqlite3.connect("user-data.db")
-cursor = db.cursor()
+# db = sqlite3.connect("user-data.db")
+# cursor = db.cursor()
 # cursor.execute("CREATE TABLE users (id INTEGER PRIMARY KEY, name varchar(50) NOT NULL, age INTEGER" "NOT NULL,
 # DOB DATE, sex varchar(20) NOT NULL, address varchar(250) NOT NULL, postal INTEGER NOT NULL, " "state varchar(50)
 # NOT NULL, city varchar(50) NOT NULL, contact BIGINT NOT NULL )")
