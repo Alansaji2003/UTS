@@ -60,7 +60,7 @@ def driver_signup():
     return render_template("driverSignup.html")
 
 
-@app.route("/Account")
+@app.route("/account")
 def account():
     return render_template("account.html")
 

@@ -213,12 +213,12 @@ label input[type="checkbox"] {
 				<div class="inputs">
 			{{ form.email(size=30) }}
 					{% for err in form.email.errors:%}
-				<span style="color: red">{{err}}</span>
+				<span style="color: red;">{{err}}</span>
 			    {%endfor%}
 			<br>
 			{{form.password(size=30)}}
 					{% for err in form.password.errors:%}
-			    <span style="color: red">{{err}}</span>
+			    <span style="color: red;">{{err}}</span>
 			       {%endfor%}
 
 		</div>
