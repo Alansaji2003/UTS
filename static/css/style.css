@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-image: url(https://alansaji2003.github.io/UTS/images/top-bg.jpg);
+  background-image: url(https://alansaji2003.github.io/UTS/static/images/top-bg.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   width: auto;
@@ -221,7 +221,7 @@ section .cards .card {
   text-align: center;
 }
 .contact{
-  background-image: url(https://alansaji2003.github.io/UTS/images/top-bg.jpg);
+  background-image: url(https://alansaji2003.github.io/UTS/static/images/top-bg.jpg);
 }
 
 .contact .row {
