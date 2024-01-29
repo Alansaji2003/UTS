@@ -73,18 +73,19 @@
       
               <div class="card bg-glass">
                 <div class="card-body px-4 py-5 px-md-5">
-                  <form>
+                  <form action="{{url_for('user_signup')}}" method="post">
                     <!-- 2 column grid layout with text inputs for the first and last names -->
+
                     <div class="row">
                       <div class="col-md-6 mb-4">
                         <div class="form-outline">
-                          <input type="text" id="form3Example1" class="form-control" />
+                          <input name="firstName" type="text" id="form3Example1" class="form-control" />
                           <label class="form-label" for="form3Example1">First name</label>
                         </div>
                       </div>
                       <div class="col-md-6 mb-4">
                         <div class="form-outline">
-                          <input type="text" id="form3Example2" class="form-control" />
+                          <input name="lastName" type="text" id="form3Example2" class="form-control" />
                           <label class="form-label" for="form3Example2">Last name</label>
                         </div>
                       </div>
@@ -92,13 +93,15 @@
       
                     <!-- Email input -->
                     <div class="form-outline mb-4">
-                      <input type="email" id="form3Example3" class="form-control" />
+                      <input name="email" type="email" id="form3Example3" class="form-control" />
                       <label class="form-label" for="form3Example3">Email address</label>
                     </div>
       
                     <!-- Password input -->
                     <div class="form-outline mb-4">
-                      <input type="password" id="form3Example4" class="form-control" />
+                      <button type="button" id="toggleButton" onclick="togglePassword()">👁️</button>
+                      <input name="password" type="password" id="form3Example4" class="form-control" autocomplete="off"/>
+
                       <label class="form-label" for="form3Example4">Password</label>
                     </div>
       
@@ -114,6 +117,7 @@
                     <button type="submit" class="btn btn-primary btn-block mb-4">
                       Sign up
                     </button>
+                      </form>
       
                     <!-- Register buttons -->
                     <div class="text-center">
@@ -137,7 +141,7 @@
                       </button>
     
                     </div>
-                  </form>
+
                 </div>
               </div>
             </div>
@@ -145,7 +149,22 @@
         </div>
       </section>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+
+</script>
+<script>
+    function togglePassword() {
+        var passwordField = document.getElementById("form3Example4");
+        var toggleButton = document.getElementById("toggleButton");
+
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            toggleButton.textContent = "👁️";
+        } else {
+            passwordField.type = "password";
+            toggleButton.textContent = "👁️";
+        }
+    }
+</script>
 </html>
 
-  <!-- Section: Design Block -->

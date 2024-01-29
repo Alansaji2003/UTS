@@ -4,33 +4,32 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email, Length
 
-# db = sqlite3.connect("user-data.db")
-# cursor = db.cursor()
-# cursor.execute("CREATE TABLE users (id INTEGER PRIMARY KEY, name varchar(50) NOT NULL, age INTEGER" "NOT NULL,
-# DOB DATE, sex varchar(20) NOT NULL, address varchar(250) NOT NULL, postal INTEGER NOT NULL, " "state varchar(50)
-# NOT NULL, city varchar(50) NOT NULL, contact BIGINT NOT NULL )")
+
 class MyForm(FlaskForm):
-    email = StringField(label='Email', validators=[DataRequired(), Email()],render_kw={"placeholder": "Email / Username"})
-    password = PasswordField(label='Password', validators=[DataRequired(), Length(min=8)],render_kw={"placeholder": "Password"})
+    email = StringField(label='Email', validators=[DataRequired(), Email()],
+                        render_kw={"placeholder": "Email / Username"})
+    password = PasswordField(label='Password', validators=[DataRequired(), Length(min=8)],
+                             render_kw={"placeholder": "Password"})
     submit = SubmitField(label='Log In')
 
 
 app = Flask(__name__)
 app.secret_key = "Thisisasecret"
 
+DATABASE = 'UTS.db'
 @app.route("/")
 def index():
     return render_template("index.html")
 
 
-@app.route("/userLogin", methods=["GET","POST"])
+@app.route("/userLogin", methods=["GET", "POST"])
 def user_login():
     form = MyForm()
     if request.method == "POST" and form.validate_on_submit():
         if form.email.data == "admin@uts.com" and form.password.data == "12345678":
             return render_template("account.html")
         else:
-            return render_template("userlogin.html",form=form)
+            return render_template("userlogin.html", form=form)
     else:
         return render_template("userlogin.html", form=form)
 
@@ -45,8 +44,37 @@ def driver_login():
     return render_template("driverLogin.html")
 
 
-@app.route("/userSignup")
+@app.route("/userSignup", methods=["GET", "POST"])
 def user_signup():
+    if request.method == 'POST':
+        # Get form data
+        first_name = request.form.get('firstName')
+        last_name = request.form.get('lastName')
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+        # Update the SQLite database
+        try:
+            conn = sqlite3.connect(DATABASE)
+            cursor = conn.cursor()
+
+            # Assuming you have a 'users' table in your database
+            cursor.execute('''
+        INSERT INTO users (first_name, last_name, email, password)
+        VALUES (?, ?, ?, ?);
+    ''', (first_name, last_name, email, password))
+
+            conn.commit()
+            cursor.close()
+            conn.close()
+
+            print("new user signup")
+            return render_template("account.html")
+
+        except Exception as e:
+            print("Database failed")
+            return f'Error updating information: {str(e)}'
+
     return render_template("userSignup.html")
 
 
